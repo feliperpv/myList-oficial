@@ -60,31 +60,6 @@ public class NovaListaActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        int id = item.getItemId();
-
-
-        if (id == android.R.id.home) {
-            finish();
-            return true;
-        }
-
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
     private void toastNomeNovaListaEmpty() {
         Toast.makeText(this, "Nome da lista está vazio", Toast.LENGTH_SHORT).show();
     }
