@@ -19,8 +19,7 @@ public class CategoriasAdapter extends BaseAdapter {
 
     private static final String[] CATEGORIAS = new String[]{
             "Frios e Laticínios", "Açougue", "Higiene",
-            "Bebidas", "Padaria", "Mercearia", "Mercearia",
-            "Mercearia", "Mercearia", "Mercearia", "Mercearia"
+            "Bebidas", "Padaria", "Mercearia"
     };
 
     private Context context;

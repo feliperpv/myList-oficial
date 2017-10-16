@@ -10,7 +10,7 @@
 
     <EditText
         android:layout_width="@dimen/dimen_dp_300"
-        android:layout_height="@dimen/dimen_dp_450"
+        android:layout_height="@dimen/dimen_dp_500"
         android:id="@+id/edtItensCategoria"
         android:background="@drawable/edit_text_design_border"
         android:gravity="start"

@@ -26,10 +26,12 @@ public class CategoriaActivity extends AppCompatActivity {
 
     public static final String ITENS_FRIOS_LATICINIOS = "itens_frios_laticinios";
     public static final String ITENS_ACOUGUE = "itens_acougue";
-    public static final String ITENS_HIGIENE= "itens_higiene";
+    public static final String ITENS_HIGIENE = "itens_higiene";
     public static final String ITENS_BEBIDAS = "itens_bebidas";
     public static final String ITENS_PADARIA = "itens_padaria";
     public static final String ITENS_MERCEARIA = "itens_mercearia";
+
+    public static String ITENS = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +47,7 @@ public class CategoriaActivity extends AppCompatActivity {
         recuperaDados(positionCategoria);
     }
 
-    public void recebeDados(){
+    public void recebeDados() {
         Bundle args = getIntent().getExtras();
 
         positionCategoria = args.getInt("categoriaClicada");
@@ -56,66 +58,52 @@ public class CategoriaActivity extends AppCompatActivity {
         salvarItens(positionCategoria);
 
         Intent intent = new Intent(this, ListasActivity.class);
-//        Bundle parametros = new Bundle();
-//
-//        parametros.putString("itensCategoria", itensCategoria);
-//
-//        intent.putExtras(parametros);
         startActivity(intent);
         finish();
     }
 
-    public void salvarItens(int positionCategoria){
+    public void salvarItens(int positionCategoria) {
         String itensCategoria = edtItensCategoria.getText().toString();
 
-        if (positionCategoria == 0) {
-            SharedPreferences sharedPreferences = getSharedPreferences(ITENS_FRIOS_LATICINIOS, 0);
-            SharedPreferences.Editor editor = sharedPreferences.edit();
+        switchPosition(positionCategoria);
 
-            editor.putString("itens_frios_laticinios", itensCategoria);
-            editor.commit();
-        }
+        SharedPreferences sharedPreferences = getSharedPreferences(ITENS, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
 
-        if (positionCategoria == 1) {
-            SharedPreferences sharedPreferences = getSharedPreferences(ITENS_ACOUGUE, 0);
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-
-            editor.putString("itens_acougue", itensCategoria);
-            editor.commit();
-        }
-
-        if (positionCategoria == 2) {
-            SharedPreferences sharedPreferences = getSharedPreferences(ITENS_HIGIENE, 0);
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-
-            editor.putString("itens_higiene", itensCategoria);
-            editor.commit();
-        }
-
-        if (positionCategoria == 3) {
-            SharedPreferences sharedPreferences = getSharedPreferences(ITENS_BEBIDAS, 0);
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-
-            editor.putString("itens_bebidas", itensCategoria);
-            editor.commit();
-        }
-
+        editor.putString(ITENS, itensCategoria);
+        editor.commit();
     }
 
-    public void recuperaDados (int positionCategoria){
+    public void recuperaDados(int positionCategoria) {
 
-        if (positionCategoria == 0) {
-            SharedPreferences sharedPreferences = getSharedPreferences(ITENS_FRIOS_LATICINIOS, 0);
-            String itensCategoria = sharedPreferences.getString("itens_frios_laticinios", "");
+        switchPosition(positionCategoria);
 
-            edtItensCategoria.setText(itensCategoria, TextView.BufferType.EDITABLE);
-        }
+        SharedPreferences sharedPreferences = getSharedPreferences(ITENS, 0);
+        String itensCategoria = sharedPreferences.getString(ITENS, "");
 
-        if (positionCategoria == 1) {
-            SharedPreferences sharedPreferences = getSharedPreferences(ITENS_ACOUGUE, 0);
-            String itensCategoria = sharedPreferences.getString("itens_acougue", "");
+        edtItensCategoria.setText(itensCategoria, TextView.BufferType.EDITABLE);
+    }
 
-            edtItensCategoria.setText(itensCategoria, TextView.BufferType.EDITABLE);
+    public void switchPosition(int positionCategoria){
+        switch (positionCategoria) {
+            case 0:
+                ITENS = ITENS_FRIOS_LATICINIOS;
+                break;
+            case 1:
+                ITENS = ITENS_ACOUGUE;
+                break;
+            case 2:
+                ITENS = ITENS_HIGIENE;
+                break;
+            case 3:
+                ITENS = ITENS_BEBIDAS;
+                break;
+            case 4:
+                ITENS = ITENS_PADARIA;
+                break;
+            case 5:
+                ITENS = ITENS_MERCEARIA;
+                break;
         }
     }
 

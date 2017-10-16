@@ -10,11 +10,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.usuario.mylist.R;
-import com.example.usuario.mylist.adapter.ListasAdapter;
 
 import java.util.ArrayList;
 
@@ -23,7 +21,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private ListView lista;
     private ArrayAdapter<String> adapter;
     public static final ArrayList<String> LISTAS = new ArrayList<String>();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

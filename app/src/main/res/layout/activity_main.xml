@@ -5,16 +5,24 @@
     android:layout_height="match_parent"
     android:gravity="center|top">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/minhas_listas"
+        android:id="@+id/textView" />
+
     <ListView
         android:id="@+id/lvListas"
         android:layout_width="@dimen/dimen_dp_300"
-        android:layout_height="@dimen/dimen_dp_450"
-        android:divider="@null"></ListView>
+        android:layout_height="@dimen/dimen_dp_500"
+        android:background="@drawable/btn_design_white"></ListView>
 
     <Button
         android:id="@+id/btnAddLista"
         android:layout_width="@dimen/dimen_dp_300"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
         android:layout_marginTop="@dimen/dimen_dp_15"
         android:background="@drawable/btn_design"
         android:text="@string/btn_add_lista"
