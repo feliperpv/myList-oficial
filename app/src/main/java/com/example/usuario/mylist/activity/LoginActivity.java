@@ -32,7 +32,7 @@ public class LoginActivity extends Activity {
     }
 
     private void validar(String login, String senha) {
-        if (login.equals("diogo") && senha.equals("123")) {
+        if (login.equals("") && senha.equals("")) {
             Intent intent = new Intent(this, MainActivity.class);
             toastLoginMessage();
             startActivity(intent);

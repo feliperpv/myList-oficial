@@ -5,6 +5,7 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="dimen_dp_300">300dp</dimen>
     <dimen name="dimen_dp_250">250dp</dimen>
+    <dimen name="dimen_dp_400">400dp</dimen>
     <dimen name="dimen_dp_450">450dp</dimen>
     <dimen name="dimen_dp_5">5dp</dimen>
     <dimen name="dimen_dp_1">1dp</dimen>

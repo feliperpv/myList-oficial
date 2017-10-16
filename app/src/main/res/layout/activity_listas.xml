@@ -2,13 +2,11 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:orientation="vertical"
-        android:layout_width="368dp"
-        android:layout_height="495dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:gravity="center|top"
         tools:context=".activity.NovaListaActivity"
-        tools:showIn="@layout/activity_nova_lista"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp">
+        tools:showIn="@layout/activity_nova_lista">
 
         <TextView
             android:id="@+id/txtTituloLista"
@@ -16,13 +14,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimen_dp_15"
             android:hint="@string/hint_nova_lista"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@android:color/black"
             android:textColorHint="@android:color/darker_gray" />
 
         <ListView
             android:id="@+id/lvCategoria"
-            android:layout_width="@dimen/dimen_dp_300"
-            android:layout_height="@dimen/dimen_dp_300"
+            android:layout_width="@dimen/dimen_dp_400"
+            android:layout_height="wrap_content"
             android:divider="@null"/>
 
         <Button
