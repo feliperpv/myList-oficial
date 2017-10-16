@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|top"
+    tools:context=".activity.NovaListaActivity"
+    tools:showIn="@layout/activity_nova_lista">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/digite_nome_lista"
+        android:id="@+id/textView" />
+
+    <EditText
+        android:id="@+id/edtNomeNovaLista"
+        android:layout_width="@dimen/dimen_dp_300"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_dp_15"
+        android:hint="@string/hint_nova_lista"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray" />
+
+    <Button
+        android:id="@+id/btnCriarLista"
+        android:layout_width="@dimen/dimen_dp_300"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_dp_5"
+        android:background="@drawable/btn_design"
+        android:onClick="criarLista"
+        android:text="@string/btn_criar_lista"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

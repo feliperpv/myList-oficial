@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".activity.LoginActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_dp_60"
+        android:background="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/myList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/app_name"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/dimen_sp_60" />
+
+    <EditText
+        android:id="@+id/edtLogin"
+        android:layout_width="@dimen/dimen_dp_300"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/myList"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_dp_15"
+        android:background="@drawable/edit_text_design"
+        android:hint="@string/hint_digite_usuario"
+        android:padding="@dimen/dimen_dp_15"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
+
+    <EditText
+        android:id="@+id/edtSenha"
+        android:layout_width="@dimen/dimen_dp_300"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_dp_10"
+        android:background="@drawable/edit_text_design"
+        android:hint="@string/hint_digite_senha"
+        android:inputType="textPassword"
+        android:padding="@dimen/dimen_dp_15"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
+
+    <Button
+        android:id="@+id/btnEntrar"
+        android:layout_width="@dimen/dimen_dp_300"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtSenha"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_dp_30"
+        android:background="@drawable/btn_design"
+        android:onClick="entrar"
+        android:text="@string/btn_entrar"
+        android:textColor="@android:color/white" />
+
+
+</RelativeLayout>

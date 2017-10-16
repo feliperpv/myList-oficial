@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:gravity="center|top"
+        tools:context=".activity.NovaListaActivity"
+        tools:showIn="@layout/activity_nova_lista"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <TextView
+            android:id="@+id/txtTituloLista"
+            android:layout_width="@dimen/dimen_dp_300"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_dp_15"
+            android:hint="@string/hint_nova_lista"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray" />
+
+        <ListView
+            android:id="@+id/lvCategoria"
+            android:layout_width="@dimen/dimen_dp_300"
+            android:layout_height="@dimen/dimen_dp_300"
+            android:divider="@null"/>
+
+        <Button
+            android:id="@+id/btnAddCategoria"
+            android:layout_width="@dimen/dimen_dp_300"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_dp_15"
+            android:background="@drawable/btn_design_white"
+            android:onClick="toAdicionarCategoria"
+            android:text="@string/btn_add_categoria"
+            android:textColor="@color/colorPrimaryDark" />
+
+    </LinearLayout>

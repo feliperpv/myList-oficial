@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|top">
+
+    <ListView
+        android:id="@+id/lvListas"
+        android:layout_width="@dimen/dimen_dp_300"
+        android:layout_height="@dimen/dimen_dp_450"
+        android:divider="@null"></ListView>
+
+    <Button
+        android:id="@+id/btnAddLista"
+        android:layout_width="@dimen/dimen_dp_300"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_dp_15"
+        android:background="@drawable/btn_design"
+        android:text="@string/btn_add_lista"
+        android:onClick="toNovaLista"
+        android:textColor="@color/branco"/>
+
+</LinearLayout>

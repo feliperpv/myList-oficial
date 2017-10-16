@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center|top"
+    tools:context=".activity.CategoriaActivity">
+
+
+    <EditText
+        android:layout_width="@dimen/dimen_dp_300"
+        android:layout_height="@dimen/dimen_dp_450"
+        android:id="@+id/edtItensCategoria"
+        android:background="@drawable/edit_text_design_border"
+        android:gravity="start"
+        android:textSize="@dimen/dimen_sp_30"
+        android:textColor="#4d2e2f" />
+
+    <Button
+        android:id="@+id/btnSalvarCategoria"
+        android:layout_width="@dimen/dimen_dp_300"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_dp_15"
+        android:background="@drawable/btn_design"
+        android:text="@string/btn_salvar_categoria"
+        android:textColor="@android:color/white"
+        android:onClick="salvarCategoria"/>
+
+</LinearLayout>
