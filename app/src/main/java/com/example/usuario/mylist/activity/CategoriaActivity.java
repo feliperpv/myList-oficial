@@ -59,7 +59,6 @@ public class CategoriaActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, ListasActivity.class);
         startActivity(intent);
-        finish();
     }
 
     public void salvarItens(int positionCategoria) {

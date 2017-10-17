@@ -7,15 +7,26 @@
     android:gravity="center|top"
     tools:context=".activity.CategoriaActivity">
 
+    <TextView
+        android:id="@+id/txtTituloLista"
+        android:layout_width="@dimen/dimen_dp_300"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_dp_15"
+        android:layout_marginBottom="@dimen/dimen_dp_10"
+        android:hint="@string/hint_nova_lista"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray" />
 
     <EditText
         android:layout_width="@dimen/dimen_dp_300"
-        android:layout_height="@dimen/dimen_dp_500"
+        android:layout_height="@dimen/dimen_dp_400"
         android:id="@+id/edtItensCategoria"
         android:background="@drawable/edit_text_design_border"
         android:gravity="start"
         android:textSize="@dimen/dimen_sp_30"
-        android:textColor="#4d2e2f" />
+        android:textColor="#4d2e2f"
+        android:padding="@dimen/dimen_dp_10"/>
 
     <Button
         android:id="@+id/btnSalvarCategoria"

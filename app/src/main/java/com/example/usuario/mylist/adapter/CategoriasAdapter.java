@@ -9,8 +9,6 @@ import android.widget.TextView;
 
 import com.example.usuario.mylist.R;
 
-import java.util.ArrayList;
-
 /**
  * Created by Usuario on 15/10/2017.
  */
@@ -48,7 +46,7 @@ public class CategoriasAdapter extends BaseAdapter {
     public View getView(int i, View convertView, ViewGroup viewGroup) {
 
         String lista = CATEGORIAS[i];
-        View view = LayoutInflater.from(context).inflate(R.layout.listas, viewGroup, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.categorias, viewGroup, false);
         TextView txtListas = (TextView) view.findViewById(R.id.txt_listas);
         txtListas.setText(lista);
 

@@ -1,6 +1,8 @@
 package com.example.usuario.mylist.activity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.SearchView;
@@ -15,6 +17,7 @@ import android.widget.Toast;
 import com.example.usuario.mylist.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
@@ -106,8 +109,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         String tituloLista = (String) adapterView.getAdapter().getItem(i);
-        Toast.makeText(this, "Texto selecionado: " + tituloLista + " posicao: " + i,
-                Toast.LENGTH_SHORT).show();
 
         Intent intent = new Intent(this, ListasActivity.class);
         Bundle parametros = new Bundle();
@@ -115,7 +116,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         intent.putExtras(parametros);
         startActivity(intent);
-        finish();
     }
 
 }

@@ -17,7 +17,11 @@
     <string name="hint_digite_senha">Digite sua senha</string>
     <string name="hint_nova_lista">Título da sua lista</string>
 
+    <string name="txt_categoria">Escolha a categoria e preencha sua lista:</string>
+
     <string name="title_activity_nova_lista">Nova Lista</string>
     <string name="title_activity_categoria">Categoria</string>
+
+
 
 </resources>

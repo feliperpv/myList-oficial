@@ -22,11 +22,7 @@ import java.util.ArrayList;
  * Created by Usuario on 15/10/2017.
  */
 
-public class NovaListaActivity extends AppCompatActivity {
-
-    public ListView categoria;
-
-    public static final ArrayList<String> CATEGORIAS = new ArrayList<String>();
+public class NovaListaActivity extends MainActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +31,6 @@ public class NovaListaActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-    }
-
-    public void toAdicionarCategoria(View v) {
-
-        Intent intent = new Intent(this, CategoriaActivity.class);
-        startActivity(intent);
     }
 
     public void criarLista (View v){

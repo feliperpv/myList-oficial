@@ -17,6 +17,7 @@ import com.example.usuario.mylist.adapter.CategoriasAdapter;
 public class ListasActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     public ListView categoria;
+    private TextView txtTituloLista;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,7 @@ public class ListasActivity extends AppCompatActivity implements AdapterView.OnI
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        txtTituloLista = (TextView) findViewById(R.id.txtTituloLista);
         recebeDados();
 
         categoria = (ListView) findViewById(R.id.lvCategoria);
@@ -38,7 +40,6 @@ public class ListasActivity extends AppCompatActivity implements AdapterView.OnI
         if (args != null) {
             String tituloLista = args.getString("tituloLista");
 
-            TextView txtTituloLista = (TextView) findViewById(R.id.txtTituloLista);
             txtTituloLista.setText(tituloLista);
         }
 
