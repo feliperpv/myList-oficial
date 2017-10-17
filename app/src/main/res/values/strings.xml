@@ -1,14 +1,13 @@
 <resources>
     <string name="app_name">MyList</string>
     <string name="minhas_listas">Minhas Listas</string>
-    <string name="nova_lista">Nova Lista</string>
-    <string name="selecione_categoria">Selecione a categoria</string>
-    <string name="action_settings">Settings</string>
+
+    <string name="action_sair">Sair</string>
     <string name="action_search">Search</string>
+
     <string name="digite_nome_lista">Digite o nome da sua LISTA:</string>
 
     <string name="btn_entrar">Entrar</string>
-    <string name="btn_add_categoria">Adicionar Categoria</string>
     <string name="btn_criar_lista">Criar Lista</string>
     <string name="btn_salvar_categoria">Salvar Categoria</string>
     <string name="btn_add_lista">Adicionar Lista</string>
@@ -18,10 +17,4 @@
     <string name="hint_nova_lista">Título da sua lista</string>
 
     <string name="txt_categoria">Escolha a categoria e preencha sua lista:</string>
-
-    <string name="title_activity_nova_lista">Nova Lista</string>
-    <string name="title_activity_categoria">Categoria</string>
-
-
-
 </resources>

@@ -23,6 +23,7 @@ public class CategoriaActivity extends AppCompatActivity {
 
     private int positionCategoria;
     private EditText edtItensCategoria;
+    private TextView txtCategoria;
 
     public static final String ITENS_FRIOS_LATICINIOS = "itens_frios_laticinios";
     public static final String ITENS_ACOUGUE = "itens_acougue";
@@ -39,6 +40,7 @@ public class CategoriaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_categoria);
 
         edtItensCategoria = (EditText) findViewById(R.id.edtItensCategoria);
+        txtCategoria = (TextView) findViewById(R.id.txtCategoria);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -50,7 +52,13 @@ public class CategoriaActivity extends AppCompatActivity {
     public void recebeDados() {
         Bundle args = getIntent().getExtras();
 
-        positionCategoria = args.getInt("categoriaClicada");
+        if (args != null) {
+
+            String tituloLista = args.getString("nomeCategoria");
+            positionCategoria = args.getInt("categoriaClicada");
+
+            txtCategoria.setText(tituloLista);
+        }
     }
 
     public void salvarCategoria(View v) {
@@ -107,24 +115,12 @@ public class CategoriaActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
         int id = item.getItemId();
 
-
         if (id == android.R.id.home) {
             finish();
-            return true;
-        }
-
-        if (id == R.id.action_settings) {
             return true;
         }
 

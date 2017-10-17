@@ -66,5 +66,4 @@
         android:text="@string/btn_entrar"
         android:textColor="@android:color/white" />
 
-
 </RelativeLayout>

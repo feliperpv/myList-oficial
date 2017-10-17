@@ -93,13 +93,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         int id = item.getItemId();
 
-
         if (id == android.R.id.home) {
             finish();
             return true;
         }
 
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_sair) {
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
             return true;
         }
 

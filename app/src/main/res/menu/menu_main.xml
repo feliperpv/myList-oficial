@@ -5,8 +5,8 @@
     tools:context=".activity.MainActivity">
 
     <item
-        android:id="@+id/action_settings"
-        android:title="@string/action_settings"
+        android:id="@+id/action_sair"
+        android:title="@string/action_sair"
         app:showAsAction="never" />
 
     <item

@@ -29,6 +29,6 @@
         android:background="@drawable/btn_design"
         android:text="@string/btn_add_lista"
         android:onClick="toNovaLista"
-        android:textColor="@color/branco"/>
+        android:textColor="@android:color/white"/>
 
 </LinearLayout>

@@ -46,14 +46,16 @@ public class ListasActivity extends AppCompatActivity implements AdapterView.OnI
     }
 
     @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+        String tituloCategoria = (String) adapterView.getAdapter().getItem(position);
+
         Intent intent = new Intent(this, CategoriaActivity.class);
         Bundle parametros = new Bundle();
 
         parametros.putInt("categoriaClicada", position);
+        parametros.putString("nomeCategoria", tituloCategoria);
 
         intent.putExtras(parametros);
-
         startActivity(intent);
     }
 
@@ -62,13 +64,8 @@ public class ListasActivity extends AppCompatActivity implements AdapterView.OnI
 
         int id = item.getItemId();
 
-
         if (id == android.R.id.home) {
             finish();
-            return true;
-        }
-
-        if (id == R.id.action_settings) {
             return true;
         }
 
