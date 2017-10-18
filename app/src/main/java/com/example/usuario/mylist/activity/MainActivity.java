@@ -76,6 +76,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         return new SearchView.OnQueryTextListener(){
             @Override
             public boolean onQueryTextSubmit(String query) {
+                adapter.getFilter().filter(query);
+
                 return false;
             }
 

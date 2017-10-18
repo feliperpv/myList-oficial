@@ -18,6 +18,7 @@ public class ListasActivity extends AppCompatActivity implements AdapterView.OnI
 
     public ListView categoria;
     private TextView txtTituloLista;
+    private String tituloLista;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +39,7 @@ public class ListasActivity extends AppCompatActivity implements AdapterView.OnI
         Bundle args = getIntent().getExtras();
 
         if (args != null) {
-            String tituloLista = args.getString("tituloLista");
+            tituloLista = args.getString("tituloLista");
 
             txtTituloLista.setText(tituloLista);
         }
@@ -54,6 +55,7 @@ public class ListasActivity extends AppCompatActivity implements AdapterView.OnI
 
         parametros.putInt("categoriaClicada", position);
         parametros.putString("nomeCategoria", tituloCategoria);
+        parametros.putString("tituloLista", tituloLista);
 
         intent.putExtras(parametros);
         startActivity(intent);

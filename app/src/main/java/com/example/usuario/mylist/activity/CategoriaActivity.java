@@ -24,14 +24,9 @@ public class CategoriaActivity extends AppCompatActivity {
     private int positionCategoria;
     private EditText edtItensCategoria;
     private TextView txtCategoria;
+    private String tituloLista;
 
-    public static final String ITENS_FRIOS_LATICINIOS = "itens_frios_laticinios";
-    public static final String ITENS_ACOUGUE = "itens_acougue";
-    public static final String ITENS_HIGIENE = "itens_higiene";
-    public static final String ITENS_BEBIDAS = "itens_bebidas";
-    public static final String ITENS_PADARIA = "itens_padaria";
-    public static final String ITENS_MERCEARIA = "itens_mercearia";
-
+    public static final String ARQUIVO_ITENS = "arquivo_itens";
     public static String ITENS = null;
 
     @Override
@@ -54,18 +49,25 @@ public class CategoriaActivity extends AppCompatActivity {
 
         if (args != null) {
 
-            String tituloLista = args.getString("nomeCategoria");
+            String tituloCategoria = args.getString("nomeCategoria");
             positionCategoria = args.getInt("categoriaClicada");
 
-            txtCategoria.setText(tituloLista);
+            tituloLista = args.getString("tituloLista");
+
+            txtCategoria.setText(tituloCategoria);
         }
     }
 
     public void salvarCategoria(View v) {
 
+        Intent intent = new Intent(this, ListasActivity.class);
+        Bundle parametros = new Bundle();
+
+        parametros.putString("tituloLista", tituloLista);
+
+        intent.putExtras(parametros);
         salvarItens(positionCategoria);
 
-        Intent intent = new Intent(this, ListasActivity.class);
         startActivity(intent);
     }
 
@@ -74,7 +76,7 @@ public class CategoriaActivity extends AppCompatActivity {
 
         switchPosition(positionCategoria);
 
-        SharedPreferences sharedPreferences = getSharedPreferences(ITENS, 0);
+        SharedPreferences sharedPreferences = getSharedPreferences(ARQUIVO_ITENS, 0);
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
         editor.putString(ITENS, itensCategoria);
@@ -85,7 +87,7 @@ public class CategoriaActivity extends AppCompatActivity {
 
         switchPosition(positionCategoria);
 
-        SharedPreferences sharedPreferences = getSharedPreferences(ITENS, 0);
+        SharedPreferences sharedPreferences = getSharedPreferences(ARQUIVO_ITENS, 0);
         String itensCategoria = sharedPreferences.getString(ITENS, "");
 
         edtItensCategoria.setText(itensCategoria, TextView.BufferType.EDITABLE);
@@ -94,22 +96,22 @@ public class CategoriaActivity extends AppCompatActivity {
     public void switchPosition(int positionCategoria){
         switch (positionCategoria) {
             case 0:
-                ITENS = ITENS_FRIOS_LATICINIOS;
+                ITENS = "itens_frios_laticinios";
                 break;
             case 1:
-                ITENS = ITENS_ACOUGUE;
+                ITENS = "itens_acougue";
                 break;
             case 2:
-                ITENS = ITENS_HIGIENE;
+                ITENS = "itens_higiene";
                 break;
             case 3:
-                ITENS = ITENS_BEBIDAS;
+                ITENS = "itens_bebidas";
                 break;
             case 4:
-                ITENS = ITENS_PADARIA;
+                ITENS = "itens_padaria";
                 break;
             case 5:
-                ITENS = ITENS_MERCEARIA;
+                ITENS = "itens_mercearia";
                 break;
         }
     }
